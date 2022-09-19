@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+    <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Calculator app</title>
+  <title>Frontend Mentor | calc app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,6 +16,63 @@
   </style>
 </head>
 <body>
+
+  <div class="calc__container">
+
+    <div class="calc__header">
+      <div class="calc__brand-content">
+        <p class="calc__brand">calc</p>
+      </div>
+      <div class="calc__theme-content">
+        <p class="calc__theme-text">theme</p>
+        <div class="calc__theme__options-content">
+          <ul class="calc__theme-options">
+            <li class="calc__theme"><a href="#">1</a></li>
+            <li class="calc__theme"><a href="#">2</a></li>
+            <li class="calc__theme"><a href="#">3</a></li>
+          </ul>
+          <div class="calc__theme-btn">
+            <button></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc__screen-content">
+      <input type="text" class="calc__screen" disabled>
+    </div>
+
+    <div class="calc__keypad">
+      <div class="calc__keys-content">
+        <button class="calc__key">7</button>
+        <button class="calc__key">8</button>
+        <button class="calc__key">9</button>
+        <button class="calc__key" id=''>DEL</button>
+      </div>
+      <div class="calc__keys-content">
+        <button class="calc__key">4</button>
+        <button class="calc__key">5</button>
+        <button class="calc__key">6</button>
+        <button class="calc__key">+</button>
+      </div>
+      <div class="calc__keys-content">
+        <button class="calc__key">1</button>
+        <button class="calc__key">2</button>
+        <button class="calc__key">3</button>
+        <button class="calc__key">-</button>
+      </div>
+      <div class="calc__keys-content">
+        <button class="calc__key">.</button>
+        <button class="calc__key">0</button>
+        <button class="calc__key">/</button>
+        <button class="calc__key">x</button>
+      </div>
+      <div class="calc__keys-content">
+        <button class="calc__key" id=''>RESET</button>
+        <button class="calc__key" id=''>=</button>
+      </div>
+    </div>
+  </div>
 
 
   

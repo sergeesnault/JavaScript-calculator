@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+body{
+    height: 100vh;
+    background-color: var(--theme1-main-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+
+/*Typography Body*/
+
+--fs: 32px;
+
+/*Font family*/
+
+--ff: 'League Spartan', sans-serif;
+--fW: 700;
+
+/*Theme 1 Backgrounds*/
+
+--theme1-main-background: hsl(222, 26%, 31%);
+--theme1-keypad-background: hsl(223, 31%, 20%);
+--theme1-screen-background: hsl(224, 36%, 15%);
+
+/*Keys*/
+
+--darkblue-key-background: hsl(225, 21%, 49%);
+--darkblue-key-shadow: hsl(224, 28%, 35%);
+
+--red-key-background-toggle: hsl(6, 63%, 50%);
+--red-key-shadow: hsl(6, 70%, 34%);
+
+--theme1-key-background: hsl(30, 25%, 89%);
+--theme1-key-shadow: hsl(28, 16%, 65%);
+
+/*Text*/
+
+--grayish: hsl(221, 14%, 31%);
+
+/*Theme 2 Backgrounds*/
+
+
+--theme2-main-background: hsl(0, 0%, 90%);
+--theme2-keypad-background: hsl(0, 5%, 81%);
+--theme2-screen-background: hsl(0, 0%, 93%);
+
+/*Keys*/
+
+--theme2-key-background: hsl(185, 42%, 37%);
+--theme2-key-shadow: hsl(185, 58%, 25%);
+
+--theme2-key-background-toggle: hsl(25, 98%, 40%);
+--theme2-key-shadow: hsl(25, 99%, 27%);
+
+--theme2-key-background: hsl(45, 7%, 89%);
+--theme2-key-shadow: hsl(35, 11%, 61%);
+
+/*Text*/
+
+--grayish-yellow: hsl(60, 10%, 19%);
+
+
+/*Theme 3 Backgrounds*/
+
+--theme3-main-background: hsl(268, 75%, 9%);
+--theme3-screen-background: hsl(268, 71%, 12%);
+
+/*Keys*/
+
+--theme3-key-background: hsl(281, 89%, 26%);
+--theme3-key-shadow: hsl(285, 91%, 52%);
+
+--theme3-key-background-toggle: hsl(176, 100%, 44%);
+--theme3-key-shadow: hsl(177, 92%, 70%);
+
+--theme3-key-background: hsl(268, 47%, 21%);
+--theme3-key-shadow: hsl(290, 70%, 36%);
+
+/*Text*/
+
+--Light-yellow: hsl(52, 100%, 62%);
+--dark-blue: hsl(198, 20%, 13%);
+--text: hsl(0, 0%, 100%);
+}
+
+.calc__container{
+    width: 350px;
+    margin-bottom: 2rem;
+}
+
+.calc__header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.calc__brand-content{
+    flex: 1;
+    display: flex;
+}
+
+.calc__brand{
+    align-self: flex-end;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.calc__theme-content{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.calc__theme-options{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.calc__theme a{
+    display: block;
+    width: 20px;
+    color: var(--text);
+    text-align: center;
+    font-size: 14px;
+}
+
+.calc__theme__options-content{
+
+}
+
+.calc__theme-text{
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: var(--text);
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.calc__theme-btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90px;
+    border-radius: 15px;
+    padding: 4px;
+    background-color: var(--theme1-keypad-background);
+}
+
+.calc__theme-btn button{
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--red-key-background-toggle);
+    cursor: pointer;
+}
+
+/*Screen*/
+
+.calc__screen-content{
+    height: 6rem;
+    margin-bottom: 1.5rem;
+}
+
+.calc__screen{
+    height: 100%;
+    width:100%;
+    border-radius: 10px;
+    outline: none;
+    border:none;
+    background-color: var(--theme1-screen-background);
+}
+
+/* Keypad */
+
+.calc__keypad{
+    background-color: var(--theme1-keypad-background);
+    padding: 1.5rem;
+}
+
+.calc__keys-content{
+    display: flex;
+    gap:1rem;
+    margin-bottom: 1rem
+}
+
+.calc__key{
+    display: block;
+    width: 25%;
+    padding:10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border:none;
+    font-size: 1.5rem;
+    font-family: var(--ff);
+    background-color: var(--theme1-key-background);
+    color: var(--grayish);
+    box-shadow: 0 5px 0 0 var(--theme1-key-shadow);
+}
+
+.calc__keypad .calc__keys-content:nth-child(1) .calc__key:nth-child(4), .calc__keypad .calc__keys-content:nth-child(5) .calc__key:nth-child(1){
+    background-color: var(--darkblue-key-background);
+    box-shadow: 0 5px 0 0 var(--darkblue-key-shadow);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.calc__keypad .calc__keys-content:nth-child(5) .calc__key{
+    width: 50%;
+}
+
+.calc__keypad .calc__keys-content:nth-child(5){
+    margin-bottom: 0;
+}
+
+.calc__keypad .calc__keys-content:nth-child(5) .calc__key:nth-child(2){
+    background-color: var(--red-key-background-toggle);
+    box-shadow: 0 5px 0 0 var(--red-key-shadow);
+    color: var(--text);
+}
