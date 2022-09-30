@@ -3,7 +3,7 @@
 
 body{
     height: 100vh;
-    background-color: var(--theme1-main-background);
+    background-color: var(--main-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,86 +19,102 @@ body{
     text-decoration: none;
 }
 
-:root{
+.theme1{
+    /*Backgrounds*/
+--main-background: hsl(222, 26%, 31%);
 
-/*Typography Body*/
+/*(toggle background, keypad background)*/
+--keypad-background: hsl(223, 31%, 20%);
+--screen-background: hsl(224, 36%, 15%);
 
---fs: 32px;
+/* Keys*/
+--d-key-background: hsl(225, 21%, 49%);
+--d-key-shadow: hsl(224, 28%, 35%);
 
-/*Font family*/
+/*(key background, toggle)*/ 
+--e-toggle:hsl(6, 63%, 50%);
+--e-key-shadow: hsl(6, 70%, 34%);
 
---ff: 'League Spartan', sans-serif;
---fW: 700;
-
-/*Theme 1 Backgrounds*/
-
---theme1-main-background: hsl(222, 26%, 31%);
---theme1-keypad-background: hsl(223, 31%, 20%);
---theme1-screen-background: hsl(224, 36%, 15%);
-
-/*Keys*/
-
---darkblue-key-background: hsl(225, 21%, 49%);
---darkblue-key-shadow: hsl(224, 28%, 35%);
-
---red-key-background-toggle: hsl(6, 63%, 50%);
---red-key-shadow: hsl(6, 70%, 34%);
-
---theme1-key-background: hsl(30, 25%, 89%);
---theme1-key-shadow: hsl(28, 16%, 65%);
+--key-background: hsl(30, 25%, 89%);
+--key-shadow: hsl(28, 16%, 65%);
 
 /*Text*/
-
 --grayish: hsl(221, 14%, 31%);
-
-/*Theme 2 Backgrounds*/
-
-
---theme2-main-background: hsl(0, 0%, 90%);
---theme2-keypad-background: hsl(0, 5%, 81%);
---theme2-screen-background: hsl(0, 0%, 93%);
-
-/*Keys*/
-
---theme2-key-background: hsl(185, 42%, 37%);
---theme2-key-shadow: hsl(185, 58%, 25%);
-
---theme2-key-background-toggle: hsl(25, 98%, 40%);
---theme2-key-shadow: hsl(25, 99%, 27%);
-
---theme2-key-background: hsl(45, 7%, 89%);
---theme2-key-shadow: hsl(35, 11%, 61%);
-
-/*Text*/
-
---grayish-yellow: hsl(60, 10%, 19%);
-
-
-/*Theme 3 Backgrounds*/
-
---theme3-main-background: hsl(268, 75%, 9%);
---theme3-screen-background: hsl(268, 71%, 12%);
-
-/*Keys*/
-
---theme3-key-background: hsl(281, 89%, 26%);
---theme3-key-shadow: hsl(285, 91%, 52%);
-
---theme3-key-background-toggle: hsl(176, 100%, 44%);
---theme3-key-shadow: hsl(177, 92%, 70%);
-
---theme3-key-background: hsl(268, 47%, 21%);
---theme3-key-shadow: hsl(290, 70%, 36%);
-
-/*Text*/
-
---Light-yellow: hsl(52, 100%, 62%);
---dark-blue: hsl(198, 20%, 13%);
 --text: hsl(0, 0%, 100%);
+--white: hsl(0, 0%, 100%);
+--toggle-btn: flex-start;
+}
+
+
+
+.theme2{
+ /*Backgrounds*/
+--main-background: hsl(0, 0%, 90%);
+/*(toggle background, keypad background)*/
+--keypad-background: hsl(0, 5%, 81%);
+/*Very light gray (screen background)*/
+--screen-background: hsl(0, 0%, 93%);
+
+/*Keys*/
+--d-key-background: hsl(185, 42%, 37%);
+--d-key-shadow: hsl(185, 58%, 25%);
+
+/*key background, toggle*/ 
+--e-toggle:hsl(25, 98%, 40%);
+--e-key-shadow: hsl(25, 99%, 27%);
+--key-background: hsl(45, 7%, 89%);
+--key-shadow: hsl(35, 11%, 61%);
+
+/*Text*/
+--grayish: hsl(60, 10%, 19%);
+--text: hsl(60, 10%, 19%);
+--white: hsl(0, 0%, 100%);
+--toggle-btn: center;
+}
+
+
+
+.theme3{
+    /*Backgrounds*/
+
+    --main-background: hsl(268, 75%, 9%);
+
+    /*(toggle background, keypad background, screen background)*/
+     --keypad-background: hsl(268, 71%, 12%);
+     --screen-background: hsl(268, 71%, 12%);
+        
+    /*(key background)*/
+    --d-key-background: hsl(281, 89%, 26%);
+    /*(key shadow)*/
+    --d-key-shadow: hsl(285, 91%, 52%);
+    
+    /*(key background, toggle):*/
+    --e-toggle: hsl(176, 100%, 44%);
+    --e-key-shadow: hsl(177, 92%, 70%);
+    
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    
+    /*Text*/
+    
+    --grayish: hsl(52, 100%, 62%);
+    --text: hsl(52, 100%, 62%);
+    --e-grayish: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+    --toggle-btn: flex-end;
+}
+
+:root{
+    /*Typography Body*/
+    --fs: 32px;
+
+    /*Font family*/
+    --ff: 'League Spartan', sans-serif;
+    --fW: 700;
 }
 
 .calc__container{
-    width: 350px;
+    max-width: 350px;
     margin-bottom: 2rem;
 }
 
@@ -113,11 +129,12 @@ body{
     display: flex;
 }
 
-.calc__brand{
+.calc__brand {
     align-self: flex-end;
     font-size: 2rem;
     color: var(--text);
 }
+
 
 .calc__theme-content{
     display: flex;
@@ -139,9 +156,6 @@ body{
     font-size: 14px;
 }
 
-.calc__theme__options-content{
-
-}
 
 .calc__theme-text{
     align-self: flex-end;
@@ -153,20 +167,21 @@ body{
 
 .calc__theme-btn{
     display: flex;
-    justify-content: flex-start;
+    justify-content: var(--toggle-btn);
     align-items: center;
     width: 90px;
     border-radius: 15px;
     padding: 4px;
-    background-color: var(--theme1-keypad-background);
+    background-color: var(--keypad-background);
 }
+
 
 .calc__theme-btn button{
     width: 15px;
     aspect-ratio: 1;
     border-radius: 50%;
     border: none;
-    background-color: var(--red-key-background-toggle);
+    background-color: var(--e-toggle);
     cursor: pointer;
 }
 
@@ -177,19 +192,25 @@ body{
     margin-bottom: 1.5rem;
 }
 
-.calc__screen{
+#calc__screen{
     height: 100%;
     width:100%;
     border-radius: 10px;
     outline: none;
     border:none;
-    background-color: var(--theme1-screen-background);
+    background-color: var(--screen-background);
+    text-align: right;
+    font-size: var(--fs);
+    color: var(--text);
+    padding-right: 1rem;
+    font-family: var(--ff);
+    
 }
 
 /* Keypad */
 
 .calc__keypad{
-    background-color: var(--theme1-keypad-background);
+    background-color: var(--keypad-background);
     padding: 1.5rem;
 }
 
@@ -208,15 +229,19 @@ body{
     border:none;
     font-size: 1.5rem;
     font-family: var(--ff);
-    background-color: var(--theme1-key-background);
+    background-color: var(--key-background);
     color: var(--grayish);
-    box-shadow: 0 5px 0 0 var(--theme1-key-shadow);
+    box-shadow: 0 5px 0 0 var(--key-shadow);
+}
+
+.nbr:hover{
+    background-color: var(--white);
 }
 
 .calc__keypad .calc__keys-content:nth-child(1) .calc__key:nth-child(4), .calc__keypad .calc__keys-content:nth-child(5) .calc__key:nth-child(1){
-    background-color: var(--darkblue-key-background);
-    box-shadow: 0 5px 0 0 var(--darkblue-key-shadow);
-    color: var(--text);
+    background-color: var(--d-key-background);
+    box-shadow: 0 5px 0 0 var(--d-key-shadow);
+    color: var(--white);
     font-size: 1rem;
 }
 
@@ -229,7 +254,7 @@ body{
 }
 
 .calc__keypad .calc__keys-content:nth-child(5) .calc__key:nth-child(2){
-    background-color: var(--red-key-background-toggle);
-    box-shadow: 0 5px 0 0 var(--red-key-shadow);
-    color: var(--text);
+    background-color: var(--e-toggle);
+    box-shadow: 0 5px 0 0 var(--e-key-shadow);
+    color: var(--white);
 }

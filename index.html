@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class='theme1'>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -27,45 +27,45 @@
         <p class="calc__theme-text">theme</p>
         <div class="calc__theme__options-content">
           <ul class="calc__theme-options">
-            <li class="calc__theme"><a href="#">1</a></li>
-            <li class="calc__theme"><a href="#">2</a></li>
-            <li class="calc__theme"><a href="#">3</a></li>
+            <li class="calc__theme"><a href="#" class="themeOption">1</a></li>
+            <li class="calc__theme"><a href="#" class="themeOption">2</a></li>
+            <li class="calc__theme"><a href="#" class="themeOption">3</a></li>
           </ul>
-          <div class="calc__theme-btn">
-            <button></button>
+          <div class="calc__theme-btn active">
+            <button id='toggleBtn'></button>
           </div>
         </div>
       </div>
     </div>
 
     <div class="calc__screen-content">
-      <input type="text" class="calc__screen" disabled>
+      <input type="text" id="calc__screen" disabled>
     </div>
 
     <div class="calc__keypad">
       <div class="calc__keys-content">
-        <button class="calc__key">7</button>
-        <button class="calc__key">8</button>
-        <button class="calc__key">9</button>
+        <button class="calc__key nbr">7</button>
+        <button class="calc__key nbr">8</button>
+        <button class="calc__key nbr">9</button>
         <button class="calc__key" id=''>DEL</button>
       </div>
       <div class="calc__keys-content">
-        <button class="calc__key">4</button>
-        <button class="calc__key">5</button>
-        <button class="calc__key">6</button>
-        <button class="calc__key">+</button>
+        <button class="calc__key nbr">4</button>
+        <button class="calc__key nbr">5</button>
+        <button class="calc__key nbr">6</button>
+        <button class="calc__key nbr">+</button>
       </div>
       <div class="calc__keys-content">
-        <button class="calc__key">1</button>
-        <button class="calc__key">2</button>
-        <button class="calc__key">3</button>
-        <button class="calc__key">-</button>
+        <button class="calc__key nbr">1</button>
+        <button class="calc__key nbr">2</button>
+        <button class="calc__key nbr">3</button>
+        <button class="calc__key nbr">-</button>
       </div>
       <div class="calc__keys-content">
-        <button class="calc__key">.</button>
-        <button class="calc__key">0</button>
-        <button class="calc__key">/</button>
-        <button class="calc__key">x</button>
+        <button class="calc__key nbr">.</button>
+        <button class="calc__key nbr">0</button>
+        <button class="calc__key nbr">/</button>
+        <button class="calc__key nbr">*</button>
       </div>
       <div class="calc__keys-content">
         <button class="calc__key" id=''>RESET</button>
@@ -80,5 +80,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
